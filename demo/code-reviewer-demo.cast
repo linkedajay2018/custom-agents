@@ -1,0 +1,7 @@
+{"version":3,"term":{"cols":80,"rows":24},"timestamp":1790231510,"command":"bash demo/record.sh","env":{"SHELL":"/bin/zsh"}}
+[0.010, "o", "TERM environment variable not set.\r\n"]
+[0.000, "o", "$ "]
+[0.508, "o", "claude -p \"use the code-reviewer subagent on demo/sample-code/users.py\"\r\n"]
+[36.432, "o", "Review complete. Top issue is a critical SQL injection at `demo/sample-code/users.py:7` (`get_user`), which concatenates `user_id` directly into the query — contrast with `deactivate_user` right below it, which correctly uses a parameterized query. Also flagged: a `TypeError` if `user_id` is an int, a bare `except: pass` that silently swallows deactivation failures, no rowcount check for nonexistent users, and unclosed DB connections in both functions.\r\n"]
+[0.480, "o", "\u001b[?25h"]
+[2.043, "x", "0"]

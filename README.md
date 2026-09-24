@@ -4,6 +4,16 @@ A library of ready-made [Claude Code](https://claude.com/claude-code) subagents 
 
 Each `.md` file is a self-contained subagent: YAML frontmatter (`name`, `description`, `tools`) followed by its system prompt.
 
+## Demo
+
+`code-reviewer` catching a SQL injection bug in [demo/sample-code/users.py](demo/sample-code/users.py):
+
+```bash
+claude -p "use the code-reviewer subagent on demo/sample-code/users.py"
+```
+
+![code-reviewer subagent demo](demo/code-reviewer-demo.gif)
+
 ## Agents
 
 ### code-quality-and-review/
